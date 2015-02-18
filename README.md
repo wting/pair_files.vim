@@ -7,14 +7,15 @@ in `yelp-main`.
 
 ## Usage
 
-Open up a Python file in yelp-main. Enter one of the below commands.
+Open up a Python file in yelp-main. Enter one of the below commands to open
+the corresponding source code or test file.
 
 ### Commands
 
-- `:PairFileEdit` edit the corresponding source code or test file
-- `:PairFileTabEdit` edit in a new tab
-- `:PairFileSplitEdit` edit in a new horizontal split
-- `:PairFileVSplitEdit` edit in a new vertical split
+- `:PairFileEdit` edit the corresponding file in the current buffer.
+- `:PairFileTabEdit` edit the corresponding file in a new tab.
+- `:PairFileSplitEdit` edit the corresponding file in a new split.
+- `:PairFileVSplitEdit` edit the corresponding file in a new vertical split.
 
 ### Example Keybindings
 
