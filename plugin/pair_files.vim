@@ -9,19 +9,26 @@ function! s:is_test_file(string)
 endfunction
 
 function! s:remove_test_suffix(string)
-    return substitute(a:string, '_test.py$', '.py', '')
+    if a:string =~ 'templates\/'
+        return substitute(a:string, '_test.py$', '.tmpl', '')
+    else
+        return substitute(a:string, '_test.py$', '.py', '')
+    end if
 endfunction
 
 function! s:remove_test_dir(path)
-    if a:path =~ '_cmds\/'
-        return substitute(a:path, 'yelp\/tests\/', '', '')
+    " If the original file starts with /yelp, then the test directory will be
+    " 'yelp/tests', but not 'yelp/tests/yelp'
+    let l:pair_file = substitute(a:path, 'yelp\/tests\/', '', '')
+    if filereadable(l:pair_file)
+        return l:pair_file
     else
         return substitute(a:path, 'yelp\/tests\/', 'yelp\/', '')
     endif
 endfunction
 
 function! s:add_test_suffix(string)
-    return substitute(a:string, '.py$', '_test.py', '')
+    return substitute(a:string, '\.py$\|\.tmpl$', '_test.py', '')
 endfunction
 
 function! s:add_test_dir(path)
