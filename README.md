@@ -7,7 +7,7 @@ in `yelp-main`.
 
 ## Usage
 
-Open up a Python file in yelp-main. Enter one of the below commands to open
+Open up a Python file in `yelp-main`. Enter one of the below commands to open
 the corresponding source code or test file.
 
 ### Commands
