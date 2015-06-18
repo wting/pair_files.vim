@@ -41,3 +41,6 @@ I find these command aliases useful to add into `.vimrc`:
 ## License
 
 Released under BSD License, full details in `LICENSE` file.
+
+[p]: https://github.com/tpope/vim-pathogen
+[v]: https://github.com/gmarik/vundle
